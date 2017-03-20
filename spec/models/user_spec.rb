@@ -1,8 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  let(:user) { 
-              @user_attrs = build(:user)}
+  let(:user) {@user_attrs = build(:user)}
 
 
   describe "user attributes" do
