@@ -1,16 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  let(:user) { User.create!({
-    first_name: "First",
-    last_name: "Last",
-    title: "Title",
-    studio: "Studio",
-    city: "City",
-    state: "State",
-    email: "user@user.com",
-    password: "password",
-    }) }
+  let(:user) { FactoryGirl.create(:user) }
 
   describe "user attributes" do
     it "user has a first name" do
