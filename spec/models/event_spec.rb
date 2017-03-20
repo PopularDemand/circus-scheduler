@@ -13,7 +13,7 @@ RSpec.describe Event, type: :model do
     end
 
     it 'returns the event the user created' do
-      expect(@studio_owner.events).to match_array [@circus_event]
+      expect(@studio_owner.events).to be_a(Event::ActiveRecord_Associations_CollectionProxy)
     end
   end
 
