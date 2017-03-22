@@ -4,6 +4,36 @@
   <%= devise_error_messages! %>
 
   <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.first_name_field :first_name, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.last_name_field :last_name, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.title_field :title, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :studio %><br />
+    <%= f.studio_field :studio, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.city_field :city, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :state %><br />
+    <%= f.state_field :state, autofocus: true %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
