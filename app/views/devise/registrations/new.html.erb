@@ -30,7 +30,7 @@
 
   <div class="field">
     <%= f.label :state %><br />
-    <%= select_tag :state, options_for_select(us_states), autofocus: true %>
+    <%= f.select(:state, options_for_select(us_states)) %>
   </div>
 
   <div class="field">
