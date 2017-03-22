@@ -14,6 +14,7 @@ gem 'formtastic-bootstrap'
 gem 'dotenv-rails'
 gem 'json'
 gem 'devise'
+gem 'haml'
 
 group :development, :test do
   gem 'rspec-rails'
