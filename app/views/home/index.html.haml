@@ -1,7 +1,7 @@
-%h1 Learning HAML, and it feels so good
+%h1 Welcome to Circus Scheduler
 - if current_user
-  = link_to 'Edit My Profile', edit_user_registration_path
+  = link_to 'View My Profile', user_path(:id => current_user.id)
   = link_to 'Logout', destroy_user_session_path, :method => :delete
 - else
-  = link_to 'Link to Register', new_user_registration_path
+  = link_to 'Register', new_user_registration_path
   = link_to 'Login', user_session_path
