@@ -18,3 +18,5 @@ This app gives studio representatives the ability to post upcoming events. The p
 * Audition listings
 * Studio profiles
 * Aerialist profiles
+
+This is a baby open source project. If you want to contribute, please get in touch with me.
