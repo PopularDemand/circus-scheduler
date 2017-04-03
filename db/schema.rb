@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170320171044) do
+ActiveRecord::Schema.define(version: 20170403013455) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,18 +18,29 @@ ActiveRecord::Schema.define(version: 20170320171044) do
   create_table "events", force: :cascade do |t|
     t.string   "name",        limit: 50, null: false
     t.text     "description",            null: false
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.integer  "user_id"
+    t.integer  "studio_id"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+  end
+
+  create_table "studios", force: :cascade do |t|
+    t.string   "name",       limit: 50
+    t.string   "address"
+    t.string   "city",       limit: 25, null: false
+    t.string   "state",      limit: 25, null: false
+    t.string   "website"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
   end
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name",             limit: 50
     t.string   "last_name",              limit: 50
     t.string   "title",                  limit: 50
-    t.string   "studio",                 limit: 50
-    t.string   "city",                   limit: 25,              null: false
-    t.string   "state",                  limit: 25,              null: false
+    t.integer  "studio_id"
     t.string   "email",                             default: "", null: false
     t.string   "encrypted_password",                default: "", null: false
     t.string   "reset_password_token"

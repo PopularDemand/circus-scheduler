@@ -4,9 +4,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.string :first_name,         limit: 50
       t.string :last_name,          limit: 50
       t.string :title,              limit: 50
-      t.string :studio,             limit: 50
-      t.string :city,               limit: 25, null: false
-      t.string :state,              limit: 25, null: false
+      t.integer :studio_id
       ## Database authenticatable
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
