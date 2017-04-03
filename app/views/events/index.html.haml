@@ -1,0 +1,12 @@
+%h1 All Circus Events
+- if @events
+  = @events.each do |event|
+    %ul
+      %li Studio Name: #{current_user.first_name}
+      %li Last name: #{current_user.last_name}
+      %li Title: #{current_user.title}
+      %li Studio: #{current_user.studio}
+      %li Location: #{current_user.city}, #{current_user.state}
+  = end
+- else
+  %p Sorry, there are no events scheduled
