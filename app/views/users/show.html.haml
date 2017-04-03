@@ -3,8 +3,8 @@
   %li First name: #{current_user.first_name}
   %li Last name: #{current_user.last_name}
   %li Title: #{current_user.title}
-  %li Studio: #{current_user.studio}
-  %li Location: #{current_user.city}, #{current_user.state}
+  %li Studio: #{}
+  %li Location: #{}, #{}
 
 = link_to 'Home', root_url
 - if user_signed_in?
